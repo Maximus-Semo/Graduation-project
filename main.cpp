@@ -1,11 +1,36 @@
 #include <iostream>
 #include <string>
 using namespace std;
-class Employee{
+class Person{
+//Data Member
+protected:
+    int id = 0;
+    string name = "";
+    string password = "";
+public:
+    //Cons
+    Person(){}
+    Person(int id, string name, string password){
+        this->id = id;
+        this->name = name;
+        this->password = password;
+    }
+    //Getter & setter
+    void setId(int id){this->id = id;}
+    void setName(string name){this->name = name;}
+    void setPassword(string password){this->password = password;}
+    int getId(){return id;}
+    string getName(){return name;}
+    string getPassword(){return password;}
+    //Methods
+
+    //Dist
+    ~Person(){
+        cout<<endl;
+    }
+};
+class Employee : public Person{
     protected:
-    int id;
-    string name;
-    string password;
     double salary;
     public:
     //check if string of name is alphabetic char only
