@@ -27,7 +27,11 @@ public:
     string getName(){return name;}
     string getPassword(){return password;}
     //Methods
-
+    void display() {
+		cout << "Id: " << this->id << endl;
+		cout << "Name: " << this->name << endl;
+		cout << "Password: " << this->password << endl;
+	}
     //Dist
     ~Person(){
         cout<<endl;
