@@ -1,5 +1,6 @@
 #include <iostream>
-#include <Person.h>
+
+#include <Employee.h>
 #include <string>
 
 using namespace std;
@@ -8,18 +9,15 @@ using namespace std;
 int main()
 {
   /*
-
-  
-  
     cout << "Team hug for bugs graduate project....!" << endl;
-
-   Person a(1,"test","1234");
+    Person a(1,"test","1234");
     cout<<a.getId()<<endl;
     cout<<a.getName()<<endl;
-
     cout<<a.getPassword()<<endl;
+  */
+  
+  
 
-<<<<<<< Client
 
 
 
