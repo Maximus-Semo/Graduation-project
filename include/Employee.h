@@ -9,9 +9,9 @@ class Employee : public Person{
    /* bool containsOnlyLetters(string const str) {
     return str.find_first_not_of("abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ") ==
         string::npos;
-}
+}*/
         void setName(string name){
-            if(containsOnlyLetters(name)==false){
+            /*if(containsOnlyLetters(name)==false){
                 cout<<"Please input correct name with contain alphabetic char...."<<endl;
                 getline(cin, name);
                 return setName(name);
