@@ -25,7 +25,7 @@ public:
         return this->balance;
     }
     //Methods:
-    bool minBalance(string balance){
+    bool minBalance(double balance){
         if(balance >= 1500){
             return true;
         }else{
