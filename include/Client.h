@@ -16,16 +16,29 @@ public:
     }
     //Setter:
     void setBalance(double balance) {
-        this->balance = balance;
+        if(minBalance(balance)){
+            this->balance = balance;
+        }
     }
     //Getter:
     double getBalance() {
         return this->balance;
     }
     //Methods:
+    bool minBalance(string balance){
+        if(balance >= 1500){
+            return true;
+        }else{
+            cout << "Invalid balance!!" << endl;
+            return false;
+        }
+    }
     void display() {
+        cout << "-----------------------------------------------------" << endl;
+        cout << "==================== display data:-====================" << endl;
         Person::display();
-        cout << "Balance: " << this->balance << endl;
+        cout << "Your Balance is : " << this->balance << endl;
+        cout << "-----------------------------------------------------" << endl;
     }
     void deposit(double amount) {
         this->balance += amount;

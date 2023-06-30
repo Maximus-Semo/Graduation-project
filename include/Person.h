@@ -2,7 +2,7 @@
 #define PERSON_H
 #include <string>
 #include <iostream>
-
+#include<Validation.h>
 using namespace std;
 
 class Person{
@@ -16,21 +16,33 @@ public:
     Person(){}
     Person(int id, string name, string password){
         this->id = id;
-        this->name = name;
-        this->password = password;
+        if(Validation::setName(name)){
+            this->name = name;
+        }
+        if(Validation::setPassword(password)){
+            this->password = password;
+        }
     }
     //Getter & setter
     void setId(int id){this->id = id;}
-    void setName(string name){this->name = name;}
-    void setPassword(string password){this->password = password;}
+    void setName(string name){
+        if(Validation::setName(name)){
+            this->name = name;
+        }
+    }
+    void setPassword(string password){
+        if(Validation::setPassword(password)){
+            this->password = password;
+        }
+    }
     int getId(){return id;}
     string getName(){return name;}
     string getPassword(){return password;}
     //Methods
     void display() {
-		cout << "Id: " << this->id << endl;
-		cout << "Name: " << this->name << endl;
-		cout << "Password: " << this->password << endl;
+		cout << "Your Id is : "  << this->id << endl;
+		cout << "Your Password is : " << this->name << endl;
+		cout << "Your Name is :  " << this->password << endl;
 	}
     //Dist
     ~Person(){
