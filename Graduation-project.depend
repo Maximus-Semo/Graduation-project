@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1688223673 source:f:\route-courses\basic course with c++\project\bank system\graduation-project\main.cpp
+	<Person.h>
+	<Client.h>
+	<Employee.h>
+	<Admin.h>
+	<Validation.h>
+	<iostream>
+	<cctype>
+	<string>
+
+1688223673 f:\route-courses\basic course with c++\project\bank system\graduation-project\include\person.h
+	<string>
+	<iostream>
+	<Validation.h>
+
+1688223673 f:\route-courses\basic course with c++\project\bank system\graduation-project\include\validation.h
+	<iostream>
+	<cctype>
+
+1688223673 f:\route-courses\basic course with c++\project\bank system\graduation-project\include\client.h
+
+1688223673 f:\route-courses\basic course with c++\project\bank system\graduation-project\include\employee.h
+	<Person.h>
+
+1688223673 f:\route-courses\basic course with c++\project\bank system\graduation-project\include\admin.h
+

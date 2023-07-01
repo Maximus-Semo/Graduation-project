@@ -41,8 +41,8 @@ public:
     //Methods
     void display() {
 		cout << "Your Id is : "  << this->id << endl;
-		cout << "Your Password is : " << this->name << endl;
-		cout << "Your Name is :  " << this->password << endl;
+		cout << "Your Name is :  " << this->name << endl;
+		cout << "Your Password is : " << this->password<< endl;
 	}
     //Dist
     ~Person(){
