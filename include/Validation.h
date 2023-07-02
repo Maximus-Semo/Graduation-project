@@ -25,7 +25,7 @@ public:
 
     static bool setPassword(string password){
         for(int i = 0; i < password.size(); i++){
-        if(password[i]== ' '|| password.size() >= 8 || password.size() <= 20){
+        if(password.size() >= 8 && password.size() <= 20){
             return true;
         }else{
             cout << "Invalid Password" << endl;

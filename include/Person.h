@@ -16,23 +16,39 @@ public:
     Person(){}
     Person(int id, string name, string password){
         this->id = id;
-        if(Validation::setName(name)){
-            this->name = name;
-        }
-        if(Validation::setPassword(password)){
-            this->password = password;
-        }
+        setName(name);
+        setPassword(password);
     }
     //Getter & setter
-    void setId(int id){this->id = id;}
+    void setId(int id){
+        this->id = id;
+    }
+
     void setName(string name){
-        if(Validation::setName(name)){
+        while(true){
+            if(Validation::setName(name)){
             this->name = name;
+            break;
+        } else {
+            cout<<"Invalid name"<<endl;
+            cout<<"Enter Valid Name(No space in Name:)";
+            cin>>name;
         }
+
+        }
+
     }
     void setPassword(string password){
+        while(true){
         if(Validation::setPassword(password)){
             this->password = password;
+            break;
+        } else {
+            cout<<"Invalid password"<<endl;
+            cout<<"Enter Valid Password(No space in password:)";
+            cin>>password;
+        }
+
         }
     }
     int getId(){return id;}
