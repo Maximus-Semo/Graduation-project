@@ -7,7 +7,7 @@ private:
     //Attributes:
     double balance;
 public:
-    //Constructors:
+    //constructors:
     Client() : Person() {
         this->balance = 0.0;
     }

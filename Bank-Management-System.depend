@@ -1,10 +1,15 @@
 # depslib dependency file v1.0
-1688165747 source:e:\projects\c++_projects\bank-management-system\main.cpp
-	<iostream>
+1688219392 source:e:\projects\c++_projects\bank-management-system\main.cpp
+	<Person.h>
+	<Client.h>
 	<Employee.h>
+	<Admin.h>
+	<Validation.h>
+	<iostream>
+	<cctype>
 	<string>
 
-1688166780 e:\projects\c++_projects\bank-management-system\include\person.h
+1688219392 e:\projects\c++_projects\bank-management-system\include\person.h
 	<string>
 	<iostream>
 	<Validation.h>
@@ -21,10 +26,14 @@
 1687820869 source:c:\users\saad\documents\github\graduation-project\src\person.cpp
 	"Person.h"
 
-1688167534 e:\projects\c++_projects\bank-management-system\include\employee.h
+1688219392 e:\projects\c++_projects\bank-management-system\include\employee.h
 	<Person.h>
 
-1688167319 e:\projects\c++_projects\bank-management-system\include\validation.h
+1688219392 e:\projects\c++_projects\bank-management-system\include\validation.h
 	<iostream>
 	<cctype>
+
+1688219392 e:\projects\c++_projects\bank-management-system\include\client.h
+
+1688219392 e:\projects\c++_projects\bank-management-system\include\admin.h
 

@@ -6,14 +6,24 @@ class Employee : public Person{
     protected:
     double salary;
     public:
-    //Constractur
+    //constructors
     Employee(){}
     Employee(int id, string name, string password, double salary):Person(id,name,password){
         if(minBalance(salary)){
             this->salary = salary;
         }
     }
-//Methodes
+//Setter & Getter
+    void setSalary(int salary){
+        if (minBalance(salary))
+        {
+            this->salary=salary;
+        }
+    }
+    double getSalary(){
+        return salary;
+    }
+//Methods
     bool minBalance(double salary){
         if(salary >= 5000){
             return true;
@@ -21,10 +31,6 @@ class Employee : public Person{
             cout << "Invalid salary!!" << endl;
             return false;
         }
-    }
-
-    double getSalary(){
-        return salary;
     }
     void display() {
         cout << "-----------------------------------------------------" << endl;

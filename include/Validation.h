@@ -7,19 +7,21 @@ using namespace std;
 
 class Validation
 {
+    //data members
     private:
     static string name;
     static string password;
 
 public:
+    //Methods
    static bool setName(string n) {
         if (n.size() < 5 || n.size() > 20) {
-            cout << "Name size must be from 5 to 20 characters" << endl;
-            return true;
+            cout << "Error Name size must be from 5 to 20 characters" << endl;
+            return false;
         }else{
             for (int i = 0; i < n.size(); i++) {
                 if (!(isalpha(n[i]))) {
-                    cout << "Name must contain only alphabetic characters" << endl;
+                    cout << "Error Name must contain only alphabetic characters" << endl;
                     return false;
                 }
             }
