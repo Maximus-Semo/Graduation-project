@@ -12,13 +12,21 @@ public:
         this->balance = 0.0;
     }
     Client(int id, string name, string password, double balance) : Person(id, name, password) {
-        this->balance = balance;
+        setBalance(balance);
     }
     //Setter:
     void setBalance(double balance) {
-        if(minBalance(balance)){
-            this->balance = balance;
+        while(true){
+            if(minBalance(balance)){
+                this->balance = balance;
+                break;
+            } else {
+                cout<<"very low balance"<<endl;
+                cout<<"Enter Balance";
+                cin>>balance;
+            }
         }
+
     }
     //Getter:
     double getBalance() {

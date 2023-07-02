@@ -5,37 +5,33 @@
 using namespace std;
 
 
-class Validation
-{
-    //data members
-    private:
-    static string name;
-    static string password;
-
+class Validation {
 public:
     //Methods
-   static bool setName(string n) {
-        if (n.size() < 5 || n.size() > 20) {
+   static bool setName(string name) {
+        if (name.size() < 5 || name.size() > 20) {
             cout << "Error Name size must be from 5 to 20 characters" << endl;
             return false;
         }else{
-            for (int i = 0; i < n.size(); i++) {
-                if (!(isalpha(n[i]))) {
-                    cout << "Error Name must contain only alphabetic characters" << endl;
+            for (int i = 0; i < name.size(); i++) {
+                if (!(isalpha(name[i])) || name[i]==' ') {
+                    cout << "Error Name must contain only alphabetic characters or space" << endl;
                     return false;
                 }
             }
         }
-
-        name = n;
+        return true;
     }
 
-    static bool setPassword(string pw){
-        if(pw.size() >= 8 && pw.size() <= 20){
-            password = pw;
+    static bool setPassword(string password){
+        for(int i = 0; i < password.size(); i++){
+        if(password[i]== ' '|| password.size() >= 8 || password.size() <= 20){
+            return true;
         }else{
             cout << "Invalid Password" << endl;
+            return false;
         }
+     }
     }
 };
 

@@ -9,22 +9,26 @@ class Employee : public Person{
     //constructors
     Employee(){}
     Employee(int id, string name, string password, double salary):Person(id,name,password){
-        if(minBalance(salary)){
-            this->salary = salary;
-        }
+        setSalary(salary);
     }
 //Setter & Getter
     void setSalary(int salary){
-        if (minBalance(salary))
-        {
-            this->salary=salary;
+            while(true){
+            if(minSalary(salary)){
+                this->salary = salary;
+                break;
+            } else {
+                cout<<"very low balance"<<endl;
+                cout<<"Enter Balance";
+                cin>>salary;
+            }
         }
     }
     double getSalary(){
         return salary;
     }
 //Methods
-    bool minBalance(double salary){
+    bool minSalary(double salary){
         if(salary >= 5000){
             return true;
         }else{

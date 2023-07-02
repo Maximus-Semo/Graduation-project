@@ -8,14 +8,10 @@
 #include <cctype>
 #include <string>
 using namespace std;
- string Validation::name = "";
- string Validation::password = "";
-
-
 
 int main()
 {
-    Admin a(1,"Maximus","12341111",5000);
+    Admin a(1,"maximus","123456789",5000);
     a.display();
 
   /*
