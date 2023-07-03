@@ -1,14 +1,17 @@
+//classes
 #include<Person.h>
 #include <Client.h>
 #include <Employee.h>
 #include <Admin.h>
 #include <Validation.h>
 
+//end classes
+//Libarly
 #include <iostream>
-
 #include <string>
 #include <cctype>
 #include <fstream>
+//end Libarly
 using namespace std;
 
 int main()
@@ -21,6 +24,7 @@ int main()
       MyWriteClient << "MyClient*test";
       MyWriteEmployee << "MyEmployee*test";
       MyWriteAdmin << "MyAdmin*test";
+
       MyWriteClient.close();
       MyWriteEmployee.close();
       MyWriteAdmin.close();
@@ -40,6 +44,12 @@ int main()
       while(getline (MyReadAdmin, myText)){
         cout << myText;
       }
+
+
+
+
+
+
    // cout << "Team hug for bugs graduate project..!" << endl;
 
 

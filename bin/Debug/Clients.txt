@@ -1,1 +1,1 @@
-MyClient test1,test 2!
+MyClient*test
