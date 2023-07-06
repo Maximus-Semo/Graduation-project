@@ -37,6 +37,8 @@
 		<Unit filename="include/Admin.h" />
 		<Unit filename="include/Client.h" />
 		<Unit filename="include/Employee.h" />
+		<Unit filename="include/FilesHelper.h" />
+		<Unit filename="include/Parser.h" />
 		<Unit filename="include/Person.h" />
 		<Unit filename="include/Validation.h" />
 		<Unit filename="main.cpp" />

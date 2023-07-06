@@ -1,1 +1,2 @@
-MyEmployee*test
+1*qwerrqwer*123456793*5000
+2*Titfllass*123456793*5000
