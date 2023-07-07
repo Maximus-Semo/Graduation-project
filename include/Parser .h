@@ -10,7 +10,7 @@ private:
 		stringstream stream(line);
 		string part;
 		vector<string> info;
-		while (getline(stream, token, '*')) info.push_back(token);
+		while (getline(stream, part, '*')) info.push_back(part);
 		return info;
 	}
 
