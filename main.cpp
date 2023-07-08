@@ -16,13 +16,14 @@
 using namespace std;
 
 int main() {
+    // cout << "..-! TEAM HUG FOR BUGS !-.." << endl;
 
       Client a(1,"maximus","123312344",5000)
             ,b(1,"maximus","12341234",5000)
             ,c1(1,"MostafaElAraqy","14221234",6000)
             ,d(1,"Raina","34231234",5600)
             ,f(1,"Mohamed","1423321234",6000);
-
+/*
       Employee v(1,"qwerrqwer","123456793",5000),
       c(1,"Titfllass","123456793",5000);
       //this is creation files
@@ -34,39 +35,30 @@ int main() {
       ofstream MyAdminLastId("AdminLastId.txt");
       string fileName = "ClientLastId.txt";
 
-
-
-
       FilesHelper::saveLast(fileName,1);
-
       FilesHelper::saveClient(a);
       FilesHelper::saveClient(b);
-
       string fileLAstIdEmp = "EmployeeLastId.txt";
       string fileEmployee = "Employee.txt";
       FilesHelper::saveEmployeeOrAdmin(fileEmployee,fileLAstIdEmp,v);
       FilesHelper::saveEmployeeOrAdmin(fileEmployee,fileLAstIdEmp,c);
-
       MyClient.close();
       MyEmployee.close();
       MyAdmin.close();
       MyClientLastId.close();
       MyEmployeeLastId.close();
       MyAdminLastId.close();
-
-        FilesHelper::saveClient(a);
-        FilesHelper::saveClient(b);
-        FilesHelper::saveClient(c1);
-        FilesHelper::saveClient(d);
-        FilesHelper::saveClient(f);
-
+*/
+      FilesHelper::saveClient(a);
+      FilesHelper::saveClient(b);
+      FilesHelper::saveClient(c1);
+      FilesHelper::saveClient(d);
+      FilesHelper::saveClient(f);
       FilesHelper::getClients();
       FilesHelper::getAdmins();
       FilesHelper::getEmployees();
 
 
-   // cout << "Team hug for bugs graduate project..!" << endl;
-
-
+  cout<<"_______________________________.! TEAM HUG FOR BUGS !.___________________________"<<endl;
   return 0;
 };

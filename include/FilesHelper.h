@@ -5,6 +5,7 @@
 #include <fstream>
 #include <iostream>
 #include<string>
+#include <typeinfo>
 
 using namespace std;
 class FilesHelper {
@@ -28,8 +29,8 @@ public:
             try {
                 int currentId = stoi(line);
                 lastId = currentId;
-            }catch (const invalid_argument& e) {
-                cerr << "Invalid argument: " << e.what() << endl;
+            }catch (invalid_argument& e) {
+                cout << "Invalid argument: " << e.what() << endl;
             }
         return lastId;
    };
@@ -114,14 +115,13 @@ public:
        ofstream file(fileName);
        ofstream lastIdFileStream(lastIdFile);
         if (!file.is_open() || !lastIdFileStream.is_open()) {
-            cerr << "Failed to open file or lastIdFile." << std::endl;
+            cerr << "Failed to open file or lastIdFile." << endl;
             return;
         }
 
         file.close();
         lastIdFileStream.close();
-
-        cout << "File cleared successfully." << std::endl;
+        cout << "File cleared successfully." << endl;
    };
 
 };
