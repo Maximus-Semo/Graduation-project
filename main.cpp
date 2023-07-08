@@ -1,3 +1,8 @@
+<<<<<<< Updated upstream
+=======
+<<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
 //classes
 #include <Person.h>
 #include <Client.h>
@@ -6,8 +11,16 @@
 #include <Validation.h>
 #include <FilesHelper.h>
 #include <parser.h>
+<<<<<<< Updated upstream
 //end classes
 //Libarly
+=======
+#include <DataSourceInterface.h>
+#include <FileManager.h>
+//end classes
+//Libarly
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 #include <iostream>
 #include <string>
 #include <cctype>

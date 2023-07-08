@@ -56,3 +56,59 @@
 	<Admin.h>
 	<Employee.h>
 
+<<<<<<< Updated upstream
+=======
+1688810600 source:c:\users\rania\onedrive - faculty of women (ain shams university)\documents\github\graduation-project\main.cpp
+	<Person.h>
+	<Client.h>
+	<Employee.h>
+	<Admin.h>
+	<Validation.h>
+	<FilesHelper.h>
+	<parser.h>
+	<DataSourceInterface.h>
+	<iostream>
+	<string>
+	<cctype>
+	<fstream>
+
+1688673414 c:\users\rania\onedrive - faculty of women (ain shams university)\documents\github\graduation-project\include\person.h
+	<string>
+	<iostream>
+	<Validation.h>
+
+1688673414 c:\users\rania\onedrive - faculty of women (ain shams university)\documents\github\graduation-project\include\validation.h
+	<iostream>
+	<cctype>
+
+1688673414 c:\users\rania\onedrive - faculty of women (ain shams university)\documents\github\graduation-project\include\client.h
+
+1688673414 c:\users\rania\onedrive - faculty of women (ain shams university)\documents\github\graduation-project\include\employee.h
+	<Person.h>
+
+1688673414 c:\users\rania\onedrive - faculty of women (ain shams university)\documents\github\graduation-project\include\admin.h
+	<Employee.h>
+
+1688673414 c:\users\rania\onedrive - faculty of women (ain shams university)\documents\github\graduation-project\include\fileshelper.h
+	<Parser.h>
+	<sstream>
+	<fstream>
+	<iostream>
+	<string>
+
+1688673414 c:\users\rania\onedrive - faculty of women (ain shams university)\documents\github\graduation-project\include\parser.h
+	<sstream>
+	<string>
+	<vector>
+	<sstream>
+	<Admin.h>
+	<Employee.h>
+
+1688812627 c:\users\rania\onedrive - faculty of women (ain shams university)\documents\github\graduation-project\include\datasourceinterface.h
+	<iostream>
+	<vector>
+	<Admin.h>
+	<Client.h>
+	<Employee.h>
+
+>>>>>>> Stashed changes
