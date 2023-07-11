@@ -12,13 +12,13 @@ using namespace std;
 class FilesHelper {
 //MTHODS -> !
 public:
-    static void saveLast(const string& enterLastIDataBase, int id){
+    static void saveLast(string enterLastIDataBase, int id){
         ofstream MyClientLastId(enterLastIDataBase);
         MyClientLastId<<id;
    };
 
    //Get Last ID form -> file:.
-   static int getLast(const string& getLastIdDataBase){
+   static int getLast(string getLastIdDataBase){
         string line;
         int lastId = 0;
         ifstream getId(getLastIdDataBase);
@@ -48,7 +48,7 @@ public:
             cout <<"Field"<<endl;
         }
    };
-   static void saveEmployeeOrAdmin(string& fileName, string& lastIdFile, Employee &e){
+   static void saveEmployeeOrAdmin(string fileName, string lastIdFile, Employee e){
         ofstream file_Employee_Admin(fileName,ios::app);
         int setLastId = getLast(lastIdFile);
         setLastId++;

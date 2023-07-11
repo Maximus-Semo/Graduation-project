@@ -3,8 +3,8 @@
 #include<Person.h>
 #include <vector>
 #include <Client.h>
-#include <FilesHelper.h>
-class Employee : public Person{
+
+class Employee:public Person{
     //data members:
     protected:
     double salary;
@@ -41,9 +41,8 @@ class Employee : public Person{
             return false;
         }
     }
-        void addClient(Client client){
-            FilesHelper::saveClient(client);
-
+        void addClient(Client& client){
+            allClients.push_back(client);
         }
 
 
@@ -70,8 +69,8 @@ class Employee : public Person{
         cout<<" ! - END Employee - !"<<endl;
     }
 };
-/*
+
 static vector<Employee> allEmployees;
 static vector<Employee>::iterator eIt;
-*/
+
 #endif // EMPLOYEE_H

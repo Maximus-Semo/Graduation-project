@@ -11,9 +11,8 @@
 #include <Employee.h>
 using namespace std;
 class FileManager :public DataSourceInterface{
-    public:
         public:
-            void addClient(Client c){
+           static void addClient(const Client &c){
                 FilesHelper::saveClient(c);
             }
             void addEmployee(Employee e){
