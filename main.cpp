@@ -6,6 +6,8 @@
 #include <Validation.h>
 #include <FilesHelper.h>
 #include <parser.h>
+#include <FileManager.h>
+#include <DataSourceInterface.h>
 //end classes
 //Libarly
 #include <iostream>
@@ -17,12 +19,13 @@ using namespace std;
 
 int main() {
     // cout << "..-! TEAM HUG FOR BUGS !-.." << endl;
-
       Client a(1,"maximus","123312344",5000)
             ,b(1,"maximus","12341234",5000)
             ,c1(1,"MostafaElAraqy","14221234",6000)
             ,d(1,"Raina","34231234",5600)
-            ,f(1,"Mohamed","1423321234",6000);
+            ,f(6,"MaxTestFilesManger","00000000",155555000);
+
+            Employee p(6,"MaxTestFilesManger","00000000",155555000);
 /*
       Employee v(1,"qwerrqwer","123456793",5000),
       c(1,"Titfllass","123456793",5000);
@@ -49,15 +52,29 @@ int main() {
       MyEmployeeLastId.close();
       MyAdminLastId.close();
 */
+  /*
       FilesHelper::saveClient(a);
       FilesHelper::saveClient(b);
       FilesHelper::saveClient(c1);
       FilesHelper::saveClient(d);
       FilesHelper::saveClient(f);
-      FilesHelper::getClients();
+
       FilesHelper::getAdmins();
       FilesHelper::getEmployees();
 
+  */
+      FileManager objectFileManager;
+      DataSourceInterface* ptr;
+      ptr = &objectFileManager;
+      ptr->getAllEmployees();
+
+/*
+      FilesHelper::getClients();
+      FilesHelper::getAdmins();
+*/
+
+      //FileManager::getAllClients();
+      //FilesHelper::getEmployees();
 
   cout<<"_______________________________.! TEAM HUG FOR BUGS !.___________________________"<<endl;
   return 0;

@@ -1,32 +1,79 @@
 #ifndef FILEMANAGER_H
 #define FILEMANAGER_H
+#include <DataSourceInterface.h>
+#include <FilesHelper.h>
 #include <iostream>
 #include <fstream>
 #include <sstream>
 #include <vector>
-#include <DataSourceInterface.h>
 #include <Admin.h>
 #include <Client.h>
 #include <Employee.h>
+using namespace std;
 class FileManager :public DataSourceInterface{
     public:
         public:
+            void addClient(Client c){
+                FilesHelper::saveClient(c);
+            }
+            void addEmployee(Employee e){
+                string MyClient("Employee.txt");
+                string ClientLastId = "EmployeeLastId.txt";
+                FilesHelper::saveEmployeeOrAdmin(MyClient,ClientLastId,e);
+            }
+
+            void addAdmin(Admin a){
+                string MyAdmin("Admin.txt");
+                string AdminLastId = "AdminLastId.txt";
+                FilesHelper::saveEmployeeOrAdmin(MyAdmin,AdminLastId,a);
+            }
+
+            void getAllClients(){
+                FilesHelper::getClients();
+            }
+
+            void getAllEmployees(){
+                FilesHelper::getEmployees();
+            }
+            void getAllAdmins(){
+                FilesHelper::getAdmins();
+            }
+
+            void removeAllClients(){
+                string fileClients = "Clients.txt";
+                string fileLastIdClients = "ClientLastId.txt";
+                FilesHelper::clearFile(fileClients,fileLastIdClients);
+            }
+            void removeAllEmployees(){
+                string fileEmployees= "Employee.txt";
+                string fileLastIdEmployees = "EmployeeLastId.txt";
+                FilesHelper::clearFile(fileEmployees,fileLastIdEmployees);
+            }
+            void removeAllAdmins(){
+                string fileClients = "Admin.txt";
+                string fileLastIdClients = "AdminLastId.txt";
+                FilesHelper::clearFile(fileClients,fileLastIdClients);
+            }
+
+
+
+        /*
         void FileManager::addClient(Client c) {
             FilesHelper::saveClient(c);
         }
 
         void FileManager::addEmployee(Employee e) {
-            FilesHelper::saveEmployeeOrAdmin("employees.txt", "employee_last_id.txt", e);
+            FilesHelper::saveEmployeeOrAdmin("Employee.txt", "EmployeeLastId.txt", e);
         }
 
         void FileManager::addAdmin(Admin a) {
-            FilesHelper::saveEmployeeOrAdmin("admins.txt", "admin_last_id.txt", a);
+            FilesHelper::saveEmployeeOrAdmin("Admin.txt", "AdminLastId.txt", a);
         }
 
         std::vector<Client> FileManager::getAllClients() {
-            std::vector<Client> clients;
-            std::ifstream inputFile("clients.txt");
-            std::string line;
+            vector<Client> clients;
+            ifstream inputFile("Clients.txt");
+            string line;
             while (getline(inputFile, line)) {
                 // Parse line to Client
                 Client client = Parser::parseToClient(line);
@@ -36,10 +83,10 @@ class FileManager :public DataSourceInterface{
             return clients;
         }
 
-        std::vector<Employee> FileManager::getAllEmployees() {
-            std::vector<Employee> employees;
-            std::ifstream inputFile("employees.txt");
-            std::string line;
+        vector<Employee> FileManager::getAllEmployees() {
+            vector<Employee> employees;
+            ifstream inputFile("Employee.txt");
+            string line;
             while (getline(inputFile, line)) {
                 // Parse line to Employee
                 Employee employee = Parser::parseToEmployee(line);
@@ -49,10 +96,10 @@ class FileManager :public DataSourceInterface{
             return employees;
         }
 
-        std::vector<Admin> FileManager::getAllAdmins() {
-            std::vector<Admin> admins;
-            std::ifstream inputFile("admins.txt");
-            std::string line;
+        vector<Admin> FileManager::getAllAdmins() {
+            vector<Admin> admins;
+            ifstream inputFile("Admin.txt");
+            string line;
             while (getline(inputFile, line)) {
                 // Parse line to Admin
                 Admin admin = Parser::parseToAdmin(line);
@@ -63,16 +110,19 @@ class FileManager :public DataSourceInterface{
         }
 
         void FileManager::removeAllClients() {
-            FilesHelper::clearFile("clients.txt", "client_last_id.txt");
+            FilesHelper::clearFile("Clients.txt", "ClientLastId.txt");
         }
 
         void FileManager::removeAllEmployees() {
-            FilesHelper::clearFile("employees.txt", "employee_last_id.txt");
+            FilesHelper::clearFile("Employee.txt", "EmployeeLastId.txt");
         }
 
         void FileManager::removeAllAdmins() {
-            FilesHelper::clearFile("admins.txt", "admin_last_id.txt");
+            FilesHelper::clearFile("Admin.txt", "AdminLastId.txt");
         }
+        */
+
+
 };
 
 #endif // FILEMANAGER_H

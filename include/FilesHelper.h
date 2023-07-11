@@ -1,5 +1,6 @@
 #ifndef FILESHELPER_H
 #define FILESHELPER_H
+
 #include <Parser.h>
 #include <sstream>
 #include <fstream>
@@ -47,7 +48,7 @@ public:
             cout <<"Field"<<endl;
         }
    };
-   static void saveEmployeeOrAdmin(string& fileName, string& lastIdFile, Employee& e){
+   static void saveEmployeeOrAdmin(string& fileName, string& lastIdFile, Employee &e){
         ofstream file_Employee_Admin(fileName,ios::app);
         int setLastId = getLast(lastIdFile);
         setLastId++;
@@ -78,20 +79,20 @@ public:
     }
 
    static void getEmployees() {
-        ifstream inputFile("Employees.txt");
+        ifstream inputFile("Employee.txt");
         string line;
         while (getline(inputFile, line))
         {
         // Parse line to Client
-        Employee employees = Parser::parseToEmployee(line);
-        cout << "<----------------- Employee ----------------------->"<<endl;
-        cout << "Your Id is : "  << employees.getId() << endl;
-		cout << "Your Name is :  " << employees.getName() << endl;
-		cout << "Your Password is : " << employees.getPassword()<< endl;
-		cout << "Your Salary is : " << employees.getSalary()<< endl;
+        Employee employee = Parser::parseToEmployee(line);
+        cout << "<----------------- Employee ------------------------>"<<endl;
+        cout << "Your Id is : "  << employee.getId() << endl;
+		cout << "Your Name is :  " << employee.getName() << endl;
+		cout << "Your Password is : " << employee.getPassword()<< endl;
+		cout << "Your Salary is : " << employee.getSalary()<< endl;
 		}
 
-    inputFile.close();
+        inputFile.close();
 
    };
    static void getAdmins(){
@@ -100,7 +101,7 @@ public:
         while (getline(inputFile, line))
         {
         // Parse line to Client
-        Admin admin = Parser::parseToAdmin(line);
+        Employee admin = Parser::parseToEmployee(line);
         cout << "<----------------- Admin ----------------------->"<<endl;
         cout << "Your Id is : "  << admin.getId() << endl;
 		cout << "Your Name is :  " << admin.getName() << endl;
@@ -110,6 +111,7 @@ public:
 
     inputFile.close();
    };
+
 // i will check on it this -> Method!
    static void clearFile(string fileName, string lastIdFile){
        ofstream file(fileName);
