@@ -3,7 +3,6 @@
 #include<Person.h>
 #include <vector>
 #include <Client.h>
-
 class Employee:public Person{
     //data members:
     protected:
@@ -41,19 +40,26 @@ class Employee:public Person{
             return false;
         }
     }
-        void addClient(Client& client){
-            allClients.push_back(client);
-        }
-
-
-    /*
-    Client* searchClient(int id){
-        for (clIt = allClients.begin(); clIt != allClients.end(); clIt++) {
-			if (clIt->getId() == id) return clIt._Ptr;
+       void addClient(Client& client){
+		allClients.push_back(client);
+	}
+	Client* searchClient(int id) {
+		for (clIt = allClients.begin(); clIt != allClients.end(); clIt++) {
+			if (clIt->getId() == id) return &(*clIt);
 		}
 		return NULL;
-    }
-    */
+	}
+	void listClient() {
+		for (clIt = allClients.begin(); clIt != allClients.end(); clIt++) {
+			clIt->display();
+			cout << "-------------------------\n";
+		}
+	}
+	void editClient(int id, string name, string password, double balance) {
+		searchClient(id)->setName(name);
+		searchClient(id)->setPassword(password);
+		searchClient(id)->setBalance(balance);
+	}
 
 
     void display() {
@@ -65,9 +71,7 @@ class Employee:public Person{
     }
 
     //Distracure
-    ~Employee(){
-        cout<<" ! - END Employee - !"<<endl;
-    }
+    ~Employee(){}
 };
 
 static vector<Employee> allEmployees;

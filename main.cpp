@@ -25,54 +25,15 @@ int main() {
             ,d(1,"Raina","34231234",5600)
             ,f(6,"MaxTestFilesManger","00000000",155555000);
 
-            Employee p(6,"MaxTestFilesManger","00000000",155555000);
-            cout << p.getId()<<endl;
-/*
-      Employee v(1,"qwerrqwer","123456793",5000),
-      c(1,"Titfllass","123456793",5000);
-      //this is creation files
-      ofstream MyClient("Clients.txt");
-      ofstream MyEmployee("Employee.txt");
-      ofstream MyAdmin("Admin.txt");
-      ofstream MyClientLastId("ClientLastId.txt");
-      ofstream MyEmployeeLastId("EmployeeLastId.txt");
-      ofstream MyAdminLastId("AdminLastId.txt");
-      string fileName = "ClientLastId.txt";
 
-      FilesHelper::saveLast(fileName,1);
-      FilesHelper::saveClient(a);
-      FilesHelper::saveClient(b);
-      string fileLAstIdEmp = "EmployeeLastId.txt";
-      string fileEmployee = "Employee.txt";
-      FilesHelper::saveEmployeeOrAdmin(fileEmployee,fileLAstIdEmp,v);
-      FilesHelper::saveEmployeeOrAdmin(fileEmployee,fileLAstIdEmp,c);
-      MyClient.close();
-      MyEmployee.close();
-      MyAdmin.close();
-      MyClientLastId.close();
-      MyEmployeeLastId.close();
-      MyAdminLastId.close();
-*/
-  /*
-      FilesHelper::saveClient(a);
-      FilesHelper::saveClient(b);
-      FilesHelper::saveClient(c1);
-      FilesHelper::saveClient(d);
-      FilesHelper::saveClient(f);
-
-      FilesHelper::getAdmins();
-      FilesHelper::getEmployees();
-
-  */
-  /*
-      FileManager objectFileManager;
-      DataSourceInterface* ptr;
-      ptr = &objectFileManager;
-      ptr->getAllAdmins();
-  */
+            FilesHelper::saveClient(a);
+            FilesHelper::saveClient(b);
+            FilesHelper::saveClient(c1);
+            FilesHelper::saveClient(d);
+            FilesHelper::saveClient(f);
 
 
-
+            FilesHelper::getClients();
  // cout<<"_______________________________.! TEAM HUG FOR BUGS !.___________________________"<<endl;
   return 0;
 };

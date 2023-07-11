@@ -7,7 +7,7 @@
 #include <iostream>
 #include<string>
 #include <typeinfo>
-
+#include<Client.h>
 using namespace std;
 class FilesHelper {
 //MTHODS -> !
@@ -68,11 +68,14 @@ public:
         {
         // Parse line to Client
         Client client = Parser::parseToClient(line);
+        allClients.push_back(client);
+
         cout << "<----------------- Client ------------------------>"<<endl;
         cout << "Your Id is : "  << client.getId() << endl;
 		cout << "Your Name is :  " << client.getName() << endl;
 		cout << "Your Password is : " << client.getPassword()<< endl;
 		cout << "Your Balance is : " << client.getBalance()<< endl;
+
 		}
 
         inputFile.close();
