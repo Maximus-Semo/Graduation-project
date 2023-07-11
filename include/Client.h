@@ -1,6 +1,6 @@
 #ifndef CLIENT_H
 #define CLIENT_H
-
+#include <vector>
 
 class Client :public Person {
 private:
@@ -73,5 +73,7 @@ public:
 		cout << "Balance: " << this->balance << endl;
 	}
 };
+static vector<Client> allClients;
+static vector<Client>::iterator clIt;
 
 #endif // CLIENT_H

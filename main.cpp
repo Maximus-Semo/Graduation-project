@@ -26,6 +26,7 @@ int main() {
             ,f(6,"MaxTestFilesManger","00000000",155555000);
 
             Employee p(6,"MaxTestFilesManger","00000000",155555000);
+            cout << p.getId()<<endl;
 /*
       Employee v(1,"qwerrqwer","123456793",5000),
       c(1,"Titfllass","123456793",5000);
@@ -63,19 +64,15 @@ int main() {
       FilesHelper::getEmployees();
 
   */
+  /*
       FileManager objectFileManager;
       DataSourceInterface* ptr;
       ptr = &objectFileManager;
-      ptr->getAllEmployees();
+      ptr->getAllAdmins();
+  */
 
-/*
-      FilesHelper::getClients();
-      FilesHelper::getAdmins();
-*/
 
-      //FileManager::getAllClients();
-      //FilesHelper::getEmployees();
 
-  cout<<"_______________________________.! TEAM HUG FOR BUGS !.___________________________"<<endl;
+ // cout<<"_______________________________.! TEAM HUG FOR BUGS !.___________________________"<<endl;
   return 0;
 };
