@@ -127,3 +127,73 @@
 	"Client.h"
 	"Employee.h"
 
+1689609887 source:f:\route-courses\basic courses\project\bank system\phase 3\graduation-project\main.cpp
+	"Person.h"
+	"Admin.h"
+	"Validation.h"
+	"FilesHelper.h"
+	"parser.h"
+	"DataSourceInterface.h"
+	"FileManager.h"
+	"Client.h"
+	"Employee.h"
+	<iostream>
+	<string>
+	<cctype>
+	<fstream>
+
+1689609887 f:\route-courses\basic courses\project\bank system\phase 3\graduation-project\include\person.h
+	<string>
+	<iostream>
+	"Validation.h"
+
+1689609887 f:\route-courses\basic courses\project\bank system\phase 3\graduation-project\include\validation.h
+	<iostream>
+	<string>
+	<cctype>
+
+1689609886 f:\route-courses\basic courses\project\bank system\phase 3\graduation-project\include\admin.h
+	<string>
+	"Employee.h"
+
+1689609886 f:\route-courses\basic courses\project\bank system\phase 3\graduation-project\include\employee.h
+	<vector>
+	"Client.h"
+
+1689609886 f:\route-courses\basic courses\project\bank system\phase 3\graduation-project\include\client.h
+	<vector>
+	"Person.h"
+
+1689609887 f:\route-courses\basic courses\project\bank system\phase 3\graduation-project\include\fileshelper.h
+	<sstream>
+	<fstream>
+	<iostream>
+	<string>
+	<typeinfo>
+	"Parser.h"
+	"Client.h"
+	"Employee.h"
+	"Admin.h"
+
+1689609887 f:\route-courses\basic courses\project\bank system\phase 3\graduation-project\include\parser.h
+	<sstream>
+	<string>
+	<vector>
+	<sstream>
+	"Client.h"
+	"Admin.h"
+	"Employee.h"
+
+1689609886 f:\route-courses\basic courses\project\bank system\phase 3\graduation-project\include\datasourceinterface.h
+	<iostream>
+	"Admin.h"
+	"Client.h"
+	"Employee.h"
+
+1689609886 f:\route-courses\basic courses\project\bank system\phase 3\graduation-project\include\filemanager.h
+	<fstream>
+	<sstream>
+	<vector>
+	"DataSourceInterface.h"
+	"FilesHelper.h"
+
