@@ -22,6 +22,6 @@ using namespace std;
 int main() {
     // cout << "..-! TEAM HUG FOR BUGS !-.." << endl;
 
- // cout<<"_______________________________.! TEAM HUG FOR BUGS !.___________________________"<<endl;
+  cout<<"_______________________________.! TEAM HUG FOR BUGS !._______________________________"<<endl;
   return 0;
 };
