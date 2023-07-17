@@ -8,6 +8,7 @@
 #include "DataSourceInterface.h"
 #include "FileManager.h"
 */
+#include "ClientManager.h"
 #include "Client.h"
 #include "Employee.h"
 //end classes
