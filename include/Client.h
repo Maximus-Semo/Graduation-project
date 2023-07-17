@@ -1,7 +1,7 @@
 #ifndef CLIENT_H
 #define CLIENT_H
 #include <vector>
-
+#include "Person.h"
 class Client :public Person {
 private:
     //Attributes:

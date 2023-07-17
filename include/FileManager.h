@@ -1,30 +1,28 @@
 #ifndef FILEMANAGER_H
 #define FILEMANAGER_H
-#include <DataSourceInterface.h>
-#include <FilesHelper.h>
-#include <iostream>
+#pragma once
 #include <fstream>
 #include <sstream>
 #include <vector>
-#include <Admin.h>
-#include <Client.h>
-#include <Employee.h>
-using namespace std;
-class FileManager:public DataSourceInterface{
+#include "DataSourceInterface.h"
+#include "FilesHelper.h"
+
+class FileManager : public DataSourceInterface{
         public:
              void addClient(Client client){
                 FilesHelper::saveClient(client);
             }
-             void addEmployee(Employee &e){
+             void addEmployee(Employee e){
                 string MyClient("Employee.txt");
                 string ClientLastId = "EmployeeLastId.txt";
                 FilesHelper::saveEmployeeOrAdmin(MyClient,ClientLastId,e);
             }
-            void addAdmin(Admin &a){
+            void addAdmin(Admin a){
                 string MyAdmin("Admin.txt");
                 string AdminLastId = "AdminLastId.txt";
                 FilesHelper::saveEmployeeOrAdmin(MyAdmin,AdminLastId,a);
             }
+
             void getAllClients(){
                 FilesHelper::getClients();
             }
@@ -51,6 +49,22 @@ class FileManager:public DataSourceInterface{
                 string fileLastIdClients = "AdminLastId.txt";
                 FilesHelper::clearFile(fileClients,fileLastIdClients);
             }
+            static void updateClients()
+            {
+                removeAllClients();
+                for (clIt = allClients.begin(); clIt != allClients.end(); clIt++) addClient(*clIt);
+            }
+            static void updateEmployees()
+            {
+                removeAllEmployees();
+                for (eIt = allEmployees.begin(); eIt != allEmployees.end(); eIt++) addEmployee(*eIt);
+            }
+            static void updateAdmins()
+            {
+                removeAllAdmins();
+                for (aIt = allAdmins.begin(); aIt != allAdmins.end(); aIt++) addAdmin(*aIt);
+            }
+
 };
 
 #endif // FILEMANAGER_H

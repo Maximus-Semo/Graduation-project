@@ -1,9 +1,8 @@
 #ifndef EMPLOYEE_H
 #define EMPLOYEE_H
-#include<Person.h>
 #include <vector>
-#include <Client.h>
-class Employee:public Person{
+#include "Client.h"
+class Employee : public Person{
     //data members:
     protected:
     double salary;
@@ -71,7 +70,9 @@ class Employee:public Person{
     }
 
     //Distracure
-    ~Employee(){}
+    ~Employee(){
+
+    }
 };
 
 static vector<Employee> allEmployees;

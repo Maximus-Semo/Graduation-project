@@ -1,6 +1,7 @@
 #ifndef VALIDATION_H
 #define VALIDATION_H
 #include <iostream>
+#include <string>
 #include <cctype>
 using namespace std;
 

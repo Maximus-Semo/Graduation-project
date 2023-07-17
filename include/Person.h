@@ -2,8 +2,9 @@
 #define PERSON_H
 #include <string>
 #include <iostream>
-#include<Validation.h>
-using namespace std;
+#include "Validation.h"
+
+//using namespace std;
 
 class Person{
 //Data Memebrs
@@ -61,9 +62,7 @@ public:
 		cout << "Your Password is : " << this->password<< endl;
 	}
     //Dist
-    ~Person(){
-        cout<<endl;
-    }
+    ~Person(){}
 };
 
 #endif // PERSON_H

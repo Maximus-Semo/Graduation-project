@@ -1,9 +1,9 @@
 #ifndef ADMIN_H
 #define ADMIN_H
-#include<Employee.h>
-class Admin:public Employee{
-private:
-    //data memeber
+#include <string>
+#include "Employee.h"
+//#include "FileManager.h"
+class Admin : public Employee{
     public:
     //constructors
     Admin(){}

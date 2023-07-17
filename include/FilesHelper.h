@@ -1,23 +1,25 @@
 #ifndef FILESHELPER_H
 #define FILESHELPER_H
 
-#include <Parser.h>
 #include <sstream>
 #include <fstream>
 #include <iostream>
-#include<string>
+#include <string>
 #include <typeinfo>
-#include<Client.h>
-using namespace std;
+
+#include "Parser.h"
+
+#include "Client.h"
+#include "Employee.h"
+#include "Admin.h"
+
 class FilesHelper {
 //MTHODS -> !
 public:
-    static void saveLast(string enterLastIDataBase, int id){
+   static void saveLast(string enterLastIDataBase, int id){
         ofstream MyClientLastId(enterLastIDataBase);
         MyClientLastId<<id;
    };
-
-   //Get Last ID form -> file:.
    static int getLast(string getLastIdDataBase){
         string line;
         int lastId = 0;
@@ -66,18 +68,9 @@ public:
         string line;
         while (getline(inputFile, line))
         {
-        // Parse line to Client
         Client client = Parser::parseToClient(line);
         allClients.push_back(client);
-
-        cout << "<----------------- Client ------------------------>"<<endl;
-        cout << "Your Id is : "  << client.getId() << endl;
-		cout << "Your Name is :  " << client.getName() << endl;
-		cout << "Your Password is : " << client.getPassword()<< endl;
-		cout << "Your Balance is : " << client.getBalance()<< endl;
-
 		}
-
         inputFile.close();
     }
 
@@ -86,36 +79,21 @@ public:
         string line;
         while (getline(inputFile, line))
         {
-        // Parse line to Client
-        Employee employee = Parser::parseToEmployee(line);
-        cout << "<----------------- Employee ------------------------>"<<endl;
-        cout << "Your Id is : "  << employee.getId() << endl;
-		cout << "Your Name is :  " << employee.getName() << endl;
-		cout << "Your Password is : " << employee.getPassword()<< endl;
-		cout << "Your Salary is : " << employee.getSalary()<< endl;
+            Employee employee = Parser::parseToEmployee(line);
+            allEmployees.push_back(employee);
 		}
-
         inputFile.close();
-
    };
    static void getAdmins(){
         ifstream inputFile("Admin.txt");
         string line;
         while (getline(inputFile, line))
         {
-        // Parse line to Client
-        Employee admin = Parser::parseToEmployee(line);
-        cout << "<----------------- Admin ----------------------->"<<endl;
-        cout << "Your Id is : "  << admin.getId() << endl;
-		cout << "Your Name is :  " << admin.getName() << endl;
-		cout << "Your Password is : " << admin.getPassword()<< endl;
-		cout << "Your Balance is : " << admin.getSalary()<< endl;
+        Admin admin = Parser::parseToEmployee(line);
+        allAdmins.push_back(admin);
 		}
-
-    inputFile.close();
+        inputFile.close();
    };
-
-// i will check on it this -> Method!
    static void clearFile(string fileName, string lastIdFile){
        ofstream file(fileName);
        ofstream lastIdFileStream(lastIdFile);
@@ -123,7 +101,6 @@ public:
             cerr << "Failed to open file or lastIdFile." << endl;
             return;
         }
-
         file.close();
         lastIdFileStream.close();
         cout << "File cleared successfully." << endl;
