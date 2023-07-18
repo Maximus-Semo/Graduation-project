@@ -7,10 +7,10 @@
 #include "parser.h"
 #include "DataSourceInterface.h"
 #include "FileManager.h"
-*/
 #include "ClientManager.h"
 #include "Client.h"
 #include "Employee.h"
+*/
 //end classes
 //Libarly
 #include <iostream>
@@ -21,8 +21,10 @@
 using namespace std;
 
 int main() {
-    // cout << "..-! TEAM HUG FOR BUGS !-.." << endl;
 
-  cout<<"_______________________________.! TEAM HUG FOR BUGS !._______________________________"<<endl;
+  cout<<"-------------------.! TEAM HUG FOR BUGS !.-------------------"<<endl;
+  cout<<"Developers->"<<endl;
+  cout<< "ENG: "<<"Maximus"<<endl<<"ENG: " <<"Rania "<<endl<<"ENG: "<<"Ahmed"<<endl<<"ENG: " <<"Mohamed"<<endl<<"ENG: " << "Mostafa";
+
   return 0;
 };

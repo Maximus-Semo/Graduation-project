@@ -57,7 +57,7 @@
 	<Admin.h>
 	<Employee.h>
 
-1689573661 source:e:\projects\c++_projects\graduation-project\main.cpp
+1689683100 source:e:\projects\c++_projects\graduation-project\main.cpp
 	"Person.h"
 	"Admin.h"
 	"Validation.h"
@@ -65,6 +65,7 @@
 	"parser.h"
 	"DataSourceInterface.h"
 	"FileManager.h"
+	"ClientManager.h"
 	"Client.h"
 	"Employee.h"
 	<iostream>
@@ -114,7 +115,7 @@
 	"Admin.h"
 	"Employee.h"
 
-1689579022 e:\projects\c++_projects\graduation-project\include\filemanager.h
+1689581978 e:\projects\c++_projects\graduation-project\include\filemanager.h
 	<fstream>
 	<sstream>
 	<vector>
@@ -196,4 +197,8 @@
 	<vector>
 	"DataSourceInterface.h"
 	"FilesHelper.h"
+
+1689682274 e:\projects\c++_projects\graduation-project\include\clientmanager.h
+	"FileManager.h"
+	"Validation.h"
 
