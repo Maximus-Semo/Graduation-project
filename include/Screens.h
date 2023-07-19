@@ -15,7 +15,7 @@
 
 class Screens
 {
-    private:
+    public:
         static void BankName(){
             cout << "A3MR" << endl;
         }
@@ -89,7 +89,6 @@ class Screens
                loginOptions();
             }
         }
-    public:
         static void RunApp(){
             FileManager::getAllData();
             welcome();
