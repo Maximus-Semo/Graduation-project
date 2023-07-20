@@ -69,7 +69,7 @@ class EmployeeManager{
            }
            cout<< " Success Update !! " << endl ;
 	}
-	static Client* login(int id, string password){
+	static Employee* login(int id, string password){
 		for (eIt = allEmployees.begin(); eIt != allEmployees.end(); eIt++) {
 			if (eIt->getId() == id && eIt->getPassword()==password) return &(*eIt);
 		}

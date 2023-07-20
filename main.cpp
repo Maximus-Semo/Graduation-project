@@ -27,11 +27,6 @@ int main() {
    s.RunApp();
 
 
-
-
-
-
-
   cout<<"-------------------.! TEAM HUG FOR BUGS !.-------------------"<<endl;
   cout<<"Developers->"<<endl;
   cout<< "ENG: "<<"Maximus"<<endl<<"ENG: " <<"Rania "<<endl<<"ENG: "<<"Ahmed"<<endl<<"ENG: " <<"Mohamed"<<endl<<"ENG: " << "Mostafa";
