@@ -64,6 +64,10 @@ class FileManager : public DataSourceInterface{
                 removeAllAdmins();
                 for (aIt = allAdmins.begin(); aIt != allAdmins.end(); aIt++) addAdmin(*aIt);
             }
+            static void getAllData() {
+            getAllClients();
+            getAllEmployees();
+            getAllAdmins();
 
 };
 

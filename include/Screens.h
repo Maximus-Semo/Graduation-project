@@ -13,8 +13,7 @@
 #include "FileManager.h"
 #include "FilesHelper.h"
 
-class Screens
-{
+class Screens{
     public:
         static void BankName(){
             cout << "A3MR" << endl;
@@ -29,8 +28,8 @@ class Screens
             cout << "2- Employee" << endl;
             cout << "3- Client" << endl;
         }
-        static void LoginAs(){
-            cout << "Please select an option to login!"
+        static int LoginAs(){
+            cout << "Please select an option to login!" << endl;
             int option;
             cin >> option;
             if(option == 1 || option == 2 || option == 3){
@@ -61,38 +60,38 @@ class Screens
            cin >> password;
            switch (option){
            case 1:
-                if (AdminManager::login(id, pass) != NULL) {
-				   while (AdminManager::adminOptions(AdminManager::login(id, pass)) != false);
-                   logout();
+                if (AdminManager::login(id, password) != NULL) {
+				   while (AdminManager::adminOptions(AdminManager::login(id, password)) != false);
+                   Logout();
                 }else{
                     Invalid(1);
                 }
                 break;
             case 2:
-			     if (EmployeeManager::login(id, pass) != NULL) {
-				    while (EmployeeManager::employeeOptions(EmployeeManager::login(id, pass)) != false);
-				    logout();
+			     if (EmployeeManager::login(id, password) != NULL) {
+				    while (EmployeeManager::employeeOptions(EmployeeManager::login(id, password)) != false);
+				    Logout();
 			     }else{
                      Invalid(2);
 			}
                 break;
 		   case 3:
-			    if (ClientManager::login(id, pass) != NULL){
-				   while (ClientManager::clientOptions(ClientManager::login(id, pass)) != false);
-				   logout();
+			    if (ClientManager::login(id, password) != NULL){
+				   while (ClientManager::clientOptions(ClientManager::login(id, password)) != false);
+				   Logout();
 			    }else{
 			        Invalid(3);
 			}
 			    break;
            default:
 			   system("cls");
-               loginOptions();
+               LoginOptions();
             }
         }
         static void RunApp(){
             FileManager::getAllData();
-            welcome();
-            loginScreen(loginAs());
+            Welcome();
+            LoginScreen(LoginAs());
         }
 
 };
