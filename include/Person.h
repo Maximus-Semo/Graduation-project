@@ -38,6 +38,7 @@ public:
         }
 
     }
+    //check on this shut
     void setPassword(string password){
         while(true){
         if(Validation::setPassword(password)){
@@ -51,6 +52,7 @@ public:
 
         }
     }
+
     int getId(){return id;}
     string getName(){return name;}
     string getPassword(){return password;}

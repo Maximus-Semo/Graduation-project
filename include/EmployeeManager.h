@@ -5,7 +5,11 @@
 #include <string>
 
 #include "FileManager.h"
+#include "Employee.h"
 #include "validation.h"
+#include <unistd.h>
+//#include <chrono>
+
 class EmployeeManager{
     private:
     static void printEmployeeMenu(){
@@ -74,7 +78,7 @@ class EmployeeManager{
 	}
 	static Employee* login(int id, string password) {
 		for (eIt = allEmployees.begin(); eIt != allEmployees.end(); eIt++) {
-			if (eIt->getId() == id && eIt->getPassword() == password) return eIt._Ptr;
+			if (eIt->getId() == id && eIt->getPassword() == password) return &(*eIt);
 		}
 		return NULL;
 	}

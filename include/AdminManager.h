@@ -5,6 +5,7 @@
 #include <string>
 
 #pragma once
+#include "ClientManager.h"
 #include "EmployeeManager.h"
 #include "Employee.h"
 
@@ -32,7 +33,7 @@ private:
 public:
 	static Admin* login(int id, string password) {
 		for (aIt = allAdmins.begin(); aIt != allAdmins.end(); aIt++) {
-			if (aIt->getId() == id && aIt->getPassword() == password) return aIt._Ptr;
+			if (aIt->getId() == id && aIt->getPassword() == password) return &(*aIt);
 		}
 		return NULL;
 	}

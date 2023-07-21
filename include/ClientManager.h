@@ -35,7 +35,7 @@ public:
 	}
 	static Client* login(int id, string password) {
 		for (clIt = allClients.begin(); clIt != allClients.end(); clIt++) {
-			if (clIt->getId() == id && clIt->getPassword() == password) return clIt._Ptr;
+			if (clIt->getId() == id && clIt->getPassword() == password) return &(*clIt);
 		}
 		return NULL;
 	}
