@@ -1,12 +1,15 @@
 #ifndef PARSER _H
 #define PARSER _H
-#include <sstream>
+#pragma once
+#include <iostream>
 #include <string>
+#include <sstream>
 #include <vector>
 #include <sstream>
 #include "Client.h"
 #include "Admin.h"
 #include "Employee.h"
+
 class Parser {
 private:
 	static vector<string> split(string line){

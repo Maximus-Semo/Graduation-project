@@ -1,8 +1,11 @@
 #ifndef EMPLOYEEMANAGER_H
 #define EMPLOYEEMANAGER_H
+#pragma once
+#include <iostream>
+#include <string>
+
 #include "FileManager.h"
 #include "validation.h"
-#pragma once
 class EmployeeManager{
     private:
     static void printEmployeeMenu(){
@@ -69,13 +72,13 @@ class EmployeeManager{
            }
            cout<< " Success Update !! " << endl ;
 	}
-	static Employee* login(int id, string password){
+	static Employee* login(int id, string password) {
 		for (eIt = allEmployees.begin(); eIt != allEmployees.end(); eIt++) {
-			if (eIt->getId() == id && eIt->getPassword()==password) return &(*eIt);
+			if (eIt->getId() == id && eIt->getPassword() == password) return eIt._Ptr;
 		}
 		return NULL;
 	}
-    void UpdatePassword()
+    void UpdatePassword(){}
 	static bool employeeOptions(Employee* employee){
         printEmployeeMenu();
         int Chose=0;

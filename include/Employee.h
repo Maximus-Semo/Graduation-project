@@ -1,7 +1,12 @@
 #ifndef EMPLOYEE_H
 #define EMPLOYEE_H
+#pragma once
+#include <iostream>
+#include <string>
+
 #include <vector>
 #include "Client.h"
+
 class Employee : public Person{
     //data members:
     protected:
@@ -39,7 +44,7 @@ class Employee : public Person{
             return false;
         }
     }
-       void addClient(Client& client){
+    void addClient(Client& client){
 		allClients.push_back(client);
 	}
 	Client* searchClient(int id) {

@@ -1,7 +1,12 @@
 #ifndef CLIENT_H
 #define CLIENT_H
+#pragma once
+#include <iostream>
+#include <string>
+
 #include <vector>
 #include "Person.h"
+
 class Client :public Person {
 private:
     //Attributes:

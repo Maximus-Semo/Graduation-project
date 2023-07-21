@@ -1,8 +1,12 @@
 #ifndef ADMINMANAGER_H
 #define ADMINMANAGER_H
+#pragma once
+#include <iostream>
+#include <string>
 
 #pragma once
 #include "EmployeeManager.h"
+#include "Employee.h"
 
 class AdminManager {
 private:

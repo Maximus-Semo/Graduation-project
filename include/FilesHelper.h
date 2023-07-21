@@ -1,17 +1,12 @@
 #ifndef FILESHELPER_H
 #define FILESHELPER_H
-
-#include <sstream>
-#include <fstream>
+#pragma once
 #include <iostream>
 #include <string>
-#include <typeinfo>
 
+
+#include <fstream>
 #include "Parser.h"
-
-#include "Client.h"
-#include "Employee.h"
-#include "Admin.h"
 
 class FilesHelper {
 //MTHODS -> !
@@ -84,17 +79,17 @@ public:
 		}
         inputFile.close();
    };
-   static void getAdmins(){
-        ifstream inputFile("Admin.txt");
-        string line;
-        while (getline(inputFile, line))
-        {
-        Admin admin = Parser::parseToEmployee(line);
-        allAdmins.push_back(admin);
+    static void getAdmins() {
+		string line;
+		ifstream file;
+		file.open("Admin.txt");
+		while (getline(file, line)) {
+			Admin a = Parser::parseToAdmin(line);
+			allAdmins.push_back(a);
 		}
-        inputFile.close();
-   };
-   static void clearFile(string fileName, string lastIdFile){
+		file.close();
+	}
+	static void clearFile(string fileName, string lastIdFile){
        ofstream file(fileName);
        ofstream lastIdFileStream(lastIdFile);
         if (!file.is_open() || !lastIdFileStream.is_open()) {

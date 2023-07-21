@@ -1,11 +1,17 @@
 #ifndef CLIENTMANAGER_H
 #define CLIENTMANAGER_H
+#pragma once
+#include <iostream>
+#include <string>
+
+#include "FileManager.h"
+#include "Validation.h"
+#include "Person.h"
+#include "Client.h"
 #include "FileManager.h"
 #include "Validation.h"
 
-using namespace std;
-
-class ClientManager {
+class ClientManager{
 private:
 	static void printClientMenu() {
 		system("cls");
@@ -14,8 +20,8 @@ private:
 		cout << "(3) Update Password" << endl;
 		cout << "(4) Withdraw" << endl;
 		cout << "(5) Deposit" << endl;
-		cout << "(6) Transfer" << endl;
-		cout << "(7) Logout" << endl;
+		cout << "(6) Transfer amount" << endl;
+		cout << "(7) Logout\n" << endl;
 	}
 	static void back(Client* client) {
 		cout << endl;
@@ -25,23 +31,22 @@ private:
 public:
 	static void updatePassword(Person* person) {
 		person->setPassword(Validation::enterPassword());
-		cout << "\nPassword updated." << endl;
+		cout << "\nPassword updated.\n";
 	}
 	static Client* login(int id, string password) {
 		for (clIt = allClients.begin(); clIt != allClients.end(); clIt++) {
-			if (clIt->getID() == id && clIt->getPassword() == password)
-                return clIt._Ptr;
+			if (clIt->getId() == id && clIt->getPassword() == password) return clIt._Ptr;
 		}
 		return NULL;
 	}
-	static bool clientOptions(Client* client) {
+	static bool clientOptions(Client* client){
 		printClientMenu();
 		cout << "Your choice is: ";
 		Employee e;
 		double amount;
 		int choice, id;
 		cin >> choice;
-		switch (choice) {
+		switch (choice){
 		case 1:
 			system("cls");
 			client->display();
@@ -56,29 +61,29 @@ public:
 			break;
 		case 4:
 			system("cls");
-			cout << "please enter an amount to withdraw: ";
+			cout << "Enter amount to withdraw: ";
 			cin >> amount;
 			client->withdraw(amount);
 			FileManager::updateClients();
 			break;
 		case 5:
 			system("cls");
-			cout << "Please enter an amount to deposit: ";
+			cout << "Enter amount to deposit: ";
 			cin >> amount;
 			client->deposit(amount);
 			FileManager::updateClients();
 			break;
 		case 6:
 			system("cls");
-			cout << "Please enter the id of the recipient: ";
+			cout << "Enter id of the recipient: ";
 			cin >> id;
 			while (e.searchClient(id) == NULL) {
 				system("cls");
-				cout << "Invalid id." << endl;
-				cout << "\nPlease enter the id of the recipient: ";
+				cout << "Invalid id.\n";
+				cout << "\nEnter id of the recipient: ";
 				cin >> id;
 			}
-			cout << "\nPlease enter an amount to transfer: ";
+			cout << "\nEnter amount to transfer: ";
 			cin >> amount;
 			client->transferTo(amount, *e.searchClient(id));
 			FileManager::updateClients();
@@ -95,5 +100,4 @@ public:
 		return true;
 	}
 };
-
 #endif // CLIENTMANAGER_H

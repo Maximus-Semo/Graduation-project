@@ -57,21 +57,12 @@
 	<Admin.h>
 	<Employee.h>
 
-1689683100 source:e:\projects\c++_projects\graduation-project\main.cpp
-	"Person.h"
-	"Admin.h"
-	"Validation.h"
-	"FilesHelper.h"
-	"parser.h"
-	"DataSourceInterface.h"
-	"FileManager.h"
-	"ClientManager.h"
-	"Client.h"
-	"Employee.h"
+1689877109 source:e:\projects\c++_projects\graduation-project\main.cpp
 	<iostream>
 	<string>
 	<cctype>
 	<fstream>
+	"Screens.h"
 
 1689577316 e:\projects\c++_projects\graduation-project\include\person.h
 	<string>
@@ -87,24 +78,17 @@
 	<vector>
 	"Person.h"
 
-1689578976 e:\projects\c++_projects\graduation-project\include\employee.h
+1689857466 e:\projects\c++_projects\graduation-project\include\employee.h
 	<vector>
 	"Client.h"
 
-1689578052 e:\projects\c++_projects\graduation-project\include\admin.h
+1689875544 e:\projects\c++_projects\graduation-project\include\admin.h
 	<string>
 	"Employee.h"
 
-1689578326 e:\projects\c++_projects\graduation-project\include\fileshelper.h
-	<sstream>
+1689858210 e:\projects\c++_projects\graduation-project\include\fileshelper.h
 	<fstream>
-	<iostream>
-	<string>
-	<typeinfo>
 	"Parser.h"
-	"Client.h"
-	"Employee.h"
-	"Admin.h"
 
 1689578326 e:\projects\c++_projects\graduation-project\include\parser.h
 	<sstream>
@@ -115,14 +99,14 @@
 	"Admin.h"
 	"Employee.h"
 
-1689581978 e:\projects\c++_projects\graduation-project\include\filemanager.h
+1689875183 e:\projects\c++_projects\graduation-project\include\filemanager.h
 	<fstream>
 	<sstream>
 	<vector>
 	"DataSourceInterface.h"
 	"FilesHelper.h"
 
-1689572250 e:\projects\c++_projects\graduation-project\include\datasourceinterface.h
+1689856575 e:\projects\c++_projects\graduation-project\include\datasourceinterface.h
 	<iostream>
 	"Admin.h"
 	"Client.h"
@@ -198,7 +182,27 @@
 	"DataSourceInterface.h"
 	"FilesHelper.h"
 
-1689682274 e:\projects\c++_projects\graduation-project\include\clientmanager.h
+1689876348 e:\projects\c++_projects\graduation-project\include\clientmanager.h
 	"FileManager.h"
 	"Validation.h"
+	"Person.h"
+	"Client.h"
+	"FileManager.h"
+	"Validation.h"
+
+1689877125 e:\projects\c++_projects\graduation-project\include\screens.h
+	<iostream>
+	<stdlib.h>
+	<chrono>
+	<thread>
+	<windows.h>
+	"AdminManager.h"
+
+1689877385 e:\projects\c++_projects\graduation-project\include\adminmanager.h
+	"EmployeeManager.h"
+	"Employee.h"
+
+1689857466 e:\projects\c++_projects\graduation-project\include\employeemanager.h
+	"FileManager.h"
+	"validation.h"
 

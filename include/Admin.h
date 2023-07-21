@@ -1,8 +1,11 @@
 #ifndef ADMIN_H
 #define ADMIN_H
+#pragma once
+#include <iostream>
 #include <string>
 #include "Employee.h"
 //#include "FileManager.h"
+
 class Admin : public Employee{
     public:
     //constructors

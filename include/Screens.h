@@ -1,19 +1,22 @@
 #ifndef SCREENS_H
 #define SCREENS_H
-#include "Person.h"
-#include "Admin.h"
+
+#pragma once
+#include <iostream>
+#include <string>
+#include <stdlib.h>
+#include <chrono>
+#include <thread>
+#include <windows.h>
+
 #include "AdminManager.h"
-#include "Employee.h"
-#include "EmployeeManager.h"
-#include "Client.h"
-#include "ClientManager.h"
-#include "Validation.h"
-#include "Parser.h"
-#include "DataSourceInterface.h"
-#include "FileManager.h"
-#include "FilesHelper.h"
+
+//#include "EmployeeManager.h"
+//#include "ClientManager.h"
+//#include "FileManager.h"
 
 class Screens{
+/*
     public:
         static void BankName(){
             cout << "A3MR" << endl;
@@ -73,7 +76,7 @@ class Screens{
 				    Logout();
 			     }else{
                      Invalid(2);
-			}
+                 }
                 break;
 		   case 3:
 			    if (ClientManager::login(id, password) != NULL){
@@ -81,19 +84,20 @@ class Screens{
 				   Logout();
 			    }else{
 			        Invalid(3);
-			}
+                }
 			    break;
            default:
 			   system("cls");
                LoginOptions();
             }
         }
+
         static void RunApp(){
             FileManager::getAllData();
             Welcome();
             LoginScreen(LoginAs());
         }
-
+*/
 };
 
 #endif // SCREENS_H
