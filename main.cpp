@@ -3,13 +3,17 @@
 #include <string>
 #include <cctype>
 #include <fstream>
-
-using namespace std;
-
-
 #include "Screens.h"
 
+using namespace std;
 int main() {
+
+    Screens s;
+    s.BankName();
+    s.RunApp();
+
+
+
 
     cout << "-------------------.! TEAM HUG FOR BUGS !.-------------------" << endl;
     cout << "Developers->" << endl;
