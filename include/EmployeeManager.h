@@ -8,20 +8,25 @@
 #include "Employee.h"
 #include "validation.h"
 #include <unistd.h>
-//#include <chrono>
+#include <chrono>
 
 class EmployeeManager{
     private:
     static void printEmployeeMenu(){
-		cout << "1 - Display my info" << endl;
-		cout << "2 - Search for client" << endl;
-		cout << "3 - Update Password" << endl;
-		cout << "4 - List all clients" << endl;
-		cout << "5 - Add new client" << endl;
-		cout << "6 - Edit client info" << endl;
-		cout << "7 - Logout" << endl;
+		cout << "(1) Display my info" << endl;
+		cout << "(2) Search for client" << endl;
+		cout << "(3) Update Password" << endl;
+		cout << "(4) List all clients" << endl;
+		cout << "(5) Add new client" << endl;
+		cout << "(6) Edit client info" << endl;
+		cout << "(7) Logout" << endl;
 	}
     public:
+        static void back(Employee* employee) {
+		cout << endl;
+		system("pause");
+		employeeOptions(employee);
+	}
 	static void NewClient(Employee* employee){
             string Name , Password;
             double balance ;
@@ -83,12 +88,13 @@ class EmployeeManager{
 		return NULL;
 	}
     void UpdatePassword(){}
+
 	static bool employeeOptions(Employee* employee){
         printEmployeeMenu();
-        int Chose=0;
-        switch(Chose){
+        int choice;
+        cin >> choice;
+        switch(choice){
             case 1:
-            //system("cls") -> to go back menue when press on Enter Putton
             system("cls");
             employee->display();
             break;
@@ -98,8 +104,8 @@ class EmployeeManager{
             break;
             case 3:
             system("cls");
-            cout << "wait Ahmed Saad method (Update password)" << endl;
             FileManager::updateClients();
+            break;
             case 4:
             system("cls");
             listAllClients(employee);
@@ -115,12 +121,12 @@ class EmployeeManager{
             break;
             case 7:
             return false;
+            break;
             default:
             system("cls");
-            cout<<"Invaild Choise !!"<<endl;
-            sleep(2000);
             employeeOptions(employee);
             return true ;
+            back(employee);
             break;
 
         }

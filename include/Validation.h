@@ -32,8 +32,6 @@ public:
         }
      }
     }
-// from here
-
 	static string enterName() {
 		string name;
 		system("cls");

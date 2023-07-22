@@ -23,7 +23,7 @@ class Screens{
         }
 
         static void Welcome(){
-        system("Color 3f");
+        system("Color 0A");
         cout << "\t    @@       @@   @@@@@@    @@      @@       @@@@@@@@    @@  @  @  @@   @@@@@@\n";
         cout << "\t    @@   @   @@   @@        @@      @@       @@    @@    @@   @@   @@   @@\n";
         cout << "\t    @@  @@@  @@   @@@@@@    @@      @@       @@    @@    @@        @@   @@@@@@\n";
