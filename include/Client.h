@@ -31,7 +31,6 @@ public:
                 cin>>balance;
             }
         }
-
     }
     //Getter:
     double getBalance() {

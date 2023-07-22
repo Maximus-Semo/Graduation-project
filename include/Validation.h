@@ -21,7 +21,6 @@ public:
         }
         return true;
     }
-
     static bool setPassword(string password){
         for(int i = 0; i < password.size(); i++){
         if(password.size() >= 8 && password.size() <= 20){
@@ -32,6 +31,63 @@ public:
         }
      }
     }
+// from here
+
+	static string enterName() {
+		string name;
+		system("cls");
+		cout << "Enter name: ";
+		cin >> name;
+		while (!setName(name)) {
+			system("cls");
+			cout << "Invalid name!\n";
+			cout << "Name must be 5 to 20 alphabetic characters.\n" << endl;
+			cout << "Enter name: ";
+			cin >> name;
+		}
+		return name;
+	}
+	static string enterPassword() {
+		string password;
+		system("cls");
+		cout << "Enter password: ";
+		cin >> password;
+		while (!setPassword(password)) {
+			system("cls");
+			cout << "Invalid password!\n";
+			cout << "Password must be 8 to 20 characters.\n" << endl;
+			cout << "Enter password: ";
+			cin >> password;
+		}
+		return password;
+	}
+	static double enterBalance() {
+		double balance;
+		cout << "Enter balance: ";
+		cin >> balance;
+		while (balance < 1500) {
+			system("cls");
+			cout << "Invalid balance!\n";
+			cout << "Balance must be at least 1500.\n" << endl;
+			cout << "Enter balance: ";
+			cin >> balance;
+		}
+		return balance;
+	}
+	static double enterSalary() {
+		double salary;
+		cout << "Enter salary: ";
+		cin >> salary;
+		while (salary < 5000) {
+			system("cls");
+			cout << "Invalid salary!\n";
+			cout << "Salary must be at least 5000.\n" << endl;
+			cout << "Enter salary: ";
+			cin >> salary;
+		}
+		return salary;
+	}
+
 };
 
 #endif // VALIDATION_H

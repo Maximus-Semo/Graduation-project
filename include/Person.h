@@ -38,7 +38,7 @@ public:
         }
 
     }
-    //check on this shut
+
     void setPassword(string password){
         while(true){
         if(Validation::setPassword(password)){

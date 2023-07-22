@@ -85,7 +85,7 @@ public:
 			}
 			cout << "\nEnter amount to transfer: ";
 			cin >> amount;
-			client->transferTo(amount, *e.searchClient(id));
+			client->trancferTo(amount, *e.searchClient(id));
 			FileManager::updateClients();
 			break;
 		case 7:

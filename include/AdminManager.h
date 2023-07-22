@@ -53,7 +53,7 @@ public:
 			FileManager::updateAdmins();
 			break;
 		case 3:
-			EmployeeManager::newClient(admin);
+			EmployeeManager::NewClient(admin);
 			break;
 		case 4:
 			EmployeeManager::searchForClient(admin);
