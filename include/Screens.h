@@ -19,19 +19,29 @@ class Screens{
 
     public:
         static void BankName(){
-            cout << "A3MR" << endl;
+            cout << "U.S. Bank" << endl;
         }
+
         static void Welcome(){
-            cout << "Welcome to A3MR Bank" << endl;
-            cout << "Please login to continue.." << endl;
+        system("Color 3f");
+        cout << "\t    @@       @@   @@@@@@    @@      @@       @@@@@@@@    @@  @  @  @@   @@@@@@\n";
+        cout << "\t    @@   @   @@   @@        @@      @@       @@    @@    @@   @@   @@   @@\n";
+        cout << "\t    @@  @@@  @@   @@@@@@    @@      @@       @@    @@    @@        @@   @@@@@@\n";
+        cout << "\t    @@ @@ @@ @@   @@        @@      @@       @@    @@    @@        @@   @@\n";
+        cout << "\t    @@       @@   @@@@@@    @@@@@@  @@@@@@   @@@@@@@@    @@        @@   @@@@@@\n";
+        BankName();
+		Sleep(3000);
+		system("cls");
+		system("Color 0f");
         }
         static void LoginOptions(){
-            cout << "Login AS: " << endl;
-            cout << "1- Admin" << endl;
-            cout << "2- Employee" << endl;
-            cout << "3- Client" << endl;
-        }
+        cout << "Login AS: " << endl;
+        cout << "(1) Admin" << endl;
+		cout << "(2) Employee" << endl;
+		cout << "(3) Client\n" << endl;
+		}
         static int LoginAs(){
+            LoginOptions();
             cout << "Please select an option to login!" << endl;
             int option;
             cin >> option;

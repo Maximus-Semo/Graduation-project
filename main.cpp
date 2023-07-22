@@ -8,12 +8,7 @@
 using namespace std;
 int main() {
 
-    Screens s;
-    s.BankName();
-    s.RunApp();
-
-
-
+    Screens::RunApp();
 
     cout << "-------------------.! TEAM HUG FOR BUGS !.-------------------" << endl;
     cout << "Developers->" << endl;
