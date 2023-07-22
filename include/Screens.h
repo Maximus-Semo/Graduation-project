@@ -11,12 +11,12 @@
 
 #include "AdminManager.h"
 
-//#include "EmployeeManager.h"
-//#include "ClientManager.h"
-//#include "FileManager.h"
+#include "EmployeeManager.h"
+#include "ClientManager.h"
+#include "FileManager.h"
 
 class Screens{
-/*
+
     public:
         static void BankName(){
             cout << "A3MR" << endl;
@@ -97,7 +97,7 @@ class Screens{
             Welcome();
             LoginScreen(LoginAs());
         }
-*/
+
 };
 
 #endif // SCREENS_H
