@@ -1,9 +1,9 @@
 #ifndef PERSON_H
 #define PERSON_H
-#include <string>
 #include <iostream>
-#include<Validation.h>
-using namespace std;
+#include <string>
+#include "Validation.h"
+
 
 class Person{
 //Data Memebrs
@@ -38,6 +38,7 @@ public:
         }
 
     }
+
     void setPassword(string password){
         while(true){
         if(Validation::setPassword(password)){
@@ -51,6 +52,7 @@ public:
 
         }
     }
+
     int getId(){return id;}
     string getName(){return name;}
     string getPassword(){return password;}
@@ -61,9 +63,7 @@ public:
 		cout << "Your Password is : " << this->password<< endl;
 	}
     //Dist
-    ~Person(){
-        cout<<endl;
-    }
+    ~Person(){}
 };
 
 #endif // PERSON_H

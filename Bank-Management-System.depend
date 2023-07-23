@@ -1,15 +1,18 @@
 # depslib dependency file v1.0
-1688333122 source:e:\projects\c++_projects\bank-management-system\main.cpp
+1688840694 source:e:\projects\c++_projects\bank-management-system\main.cpp
 	<Person.h>
 	<Client.h>
 	<Employee.h>
 	<Admin.h>
 	<Validation.h>
+	<FilesHelper.h>
+	<parser.h>
 	<iostream>
-	<cctype>
 	<string>
+	<cctype>
+	<fstream>
 
-1688333347 e:\projects\c++_projects\bank-management-system\include\person.h
+1688838255 e:\projects\c++_projects\bank-management-system\include\person.h
 	<string>
 	<iostream>
 	<Validation.h>
@@ -26,15 +29,207 @@
 1687820869 source:c:\users\saad\documents\github\graduation-project\src\person.cpp
 	"Person.h"
 
-1688331123 e:\projects\c++_projects\bank-management-system\include\employee.h
+1688838254 e:\projects\c++_projects\bank-management-system\include\employee.h
 	<Person.h>
 
-1688333233 e:\projects\c++_projects\bank-management-system\include\validation.h
+1688838255 e:\projects\c++_projects\bank-management-system\include\validation.h
 	<iostream>
 	<cctype>
 
-1688331123 e:\projects\c++_projects\bank-management-system\include\client.h
+1688838254 e:\projects\c++_projects\bank-management-system\include\client.h
 
-1688298182 e:\projects\c++_projects\bank-management-system\include\admin.h
+1688838254 e:\projects\c++_projects\bank-management-system\include\admin.h
 	<Employee.h>
+
+1688839947 e:\projects\c++_projects\bank-management-system\include\fileshelper.h
+	<Parser.h>
+	<sstream>
+	<fstream>
+	<iostream>
+	<string>
+	<typeinfo>
+
+1688838254 e:\projects\c++_projects\bank-management-system\include\parser.h
+	<sstream>
+	<string>
+	<vector>
+	<sstream>
+	<Admin.h>
+	<Employee.h>
+
+1690030499 source:e:\projects\c++_projects\graduation-project\main.cpp
+	<iostream>
+	<string>
+	<string>
+	<cctype>
+	<fstream>
+	"Screens.h"
+
+1690012844 e:\projects\c++_projects\graduation-project\include\person.h
+	<iostream>
+	<string>
+	"Validation.h"
+
+1690031784 e:\projects\c++_projects\graduation-project\include\validation.h
+	<iostream>
+	<string>
+	<cctype>
+
+1690013219 e:\projects\c++_projects\graduation-project\include\client.h
+	<iostream>
+	<string>
+	<vector>
+	"Person.h"
+
+1689877849 e:\projects\c++_projects\graduation-project\include\employee.h
+	<iostream>
+	<string>
+	<vector>
+	"Client.h"
+
+1689877849 e:\projects\c++_projects\graduation-project\include\admin.h
+	<iostream>
+	<string>
+	"Employee.h"
+
+1690031249 e:\projects\c++_projects\graduation-project\include\fileshelper.h
+	<iostream>
+	<string>
+	<fstream>
+	"Parser.h"
+
+1689877849 e:\projects\c++_projects\graduation-project\include\parser.h
+	<iostream>
+	<string>
+	<sstream>
+	<vector>
+	<sstream>
+	"Client.h"
+	"Admin.h"
+	"Employee.h"
+
+1690031249 e:\projects\c++_projects\graduation-project\include\filemanager.h
+	<iostream>
+	<string>
+	<fstream>
+	<sstream>
+	<vector>
+	"Admin.h"
+	"DataSourceInterface.h"
+	"FilesHelper.h"
+
+1689961434 e:\projects\c++_projects\graduation-project\include\datasourceinterface.h
+	<iostream>
+	<string>
+	"Admin.h"
+	"Client.h"
+	"Employee.h"
+
+1689609887 source:f:\route-courses\basic courses\project\bank system\phase 3\graduation-project\main.cpp
+	"Person.h"
+	"Admin.h"
+	"Validation.h"
+	"FilesHelper.h"
+	"parser.h"
+	"DataSourceInterface.h"
+	"FileManager.h"
+	"Client.h"
+	"Employee.h"
+	<iostream>
+	<string>
+	<cctype>
+	<fstream>
+
+1689609887 f:\route-courses\basic courses\project\bank system\phase 3\graduation-project\include\person.h
+	<string>
+	<iostream>
+	"Validation.h"
+
+1689609887 f:\route-courses\basic courses\project\bank system\phase 3\graduation-project\include\validation.h
+	<iostream>
+	<string>
+	<cctype>
+
+1689609886 f:\route-courses\basic courses\project\bank system\phase 3\graduation-project\include\admin.h
+	<string>
+	"Employee.h"
+
+1689609886 f:\route-courses\basic courses\project\bank system\phase 3\graduation-project\include\employee.h
+	<vector>
+	"Client.h"
+
+1689609886 f:\route-courses\basic courses\project\bank system\phase 3\graduation-project\include\client.h
+	<vector>
+	"Person.h"
+
+1689609887 f:\route-courses\basic courses\project\bank system\phase 3\graduation-project\include\fileshelper.h
+	<sstream>
+	<fstream>
+	<iostream>
+	<string>
+	<typeinfo>
+	"Parser.h"
+	"Client.h"
+	"Employee.h"
+	"Admin.h"
+
+1689609887 f:\route-courses\basic courses\project\bank system\phase 3\graduation-project\include\parser.h
+	<sstream>
+	<string>
+	<vector>
+	<sstream>
+	"Client.h"
+	"Admin.h"
+	"Employee.h"
+
+1689609886 f:\route-courses\basic courses\project\bank system\phase 3\graduation-project\include\datasourceinterface.h
+	<iostream>
+	"Admin.h"
+	"Client.h"
+	"Employee.h"
+
+1689609886 f:\route-courses\basic courses\project\bank system\phase 3\graduation-project\include\filemanager.h
+	<fstream>
+	<sstream>
+	<vector>
+	"DataSourceInterface.h"
+	"FilesHelper.h"
+
+1690013219 e:\projects\c++_projects\graduation-project\include\clientmanager.h
+	<iostream>
+	<string>
+	"FileManager.h"
+	"Validation.h"
+	"Person.h"
+	"Client.h"
+	"FileManager.h"
+	"Validation.h"
+
+1690030609 e:\projects\c++_projects\graduation-project\include\screens.h
+	<iostream>
+	<string>
+	<stdlib.h>
+	<chrono>
+	<thread>
+	<windows.h>
+	"AdminManager.h"
+	"EmployeeManager.h"
+	"ClientManager.h"
+	"FileManager.h"
+
+1690031784 e:\projects\c++_projects\graduation-project\include\adminmanager.h
+	<iostream>
+	<string>
+	"ClientManager.h"
+	"EmployeeManager.h"
+	"Employee.h"
+
+1690031896 e:\projects\c++_projects\graduation-project\include\employeemanager.h
+	<iostream>
+	<string>
+	"FileManager.h"
+	"Employee.h"
+	"validation.h"
+	<unistd.h>
+	<chrono>
 

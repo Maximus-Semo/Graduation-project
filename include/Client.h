@@ -1,6 +1,11 @@
 #ifndef CLIENT_H
 #define CLIENT_H
+#pragma once
+#include <iostream>
+#include <string>
 
+#include <vector>
+#include "Person.h"
 
 class Client :public Person {
 private:
@@ -26,7 +31,6 @@ public:
                 cin>>balance;
             }
         }
-
     }
     //Getter:
     double getBalance() {
@@ -52,7 +56,8 @@ public:
         this->balance += amount;
         cout << "\nSuccessful Deposit" << endl;
     }
-    void withdraw(double amount) {
+    void withdraw(double amount)
+    {
         if(amount <= this->balance) {
             this->balance -= amount;
             cout << "\nSuccessful Withdraw" << endl;
@@ -73,5 +78,7 @@ public:
 		cout << "Balance: " << this->balance << endl;
 	}
 };
+static vector<Client> allClients;
+static vector<Client>::iterator clIt;
 
 #endif // CLIENT_H

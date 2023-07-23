@@ -1,26 +1,18 @@
-#include<Person.h>
-#include<Client.h>
-#include <Employee.h>
-#include <Admin.h>
-#include<Validation.h>
-
 #include <iostream>
-#include <cctype>
 #include <string>
+#include <string>
+#include <cctype>
+#include <fstream>
+#include "Screens.h"
+
 using namespace std;
+int main() {
 
-int main()
-{
-    Admin a(1,"maximus","1234",5000);
-    a.display();
+    Screens::RunApp();
 
+    cout << "-------------------.! TEAM HUG FOR BUGS !.-------------------" << endl;
+    cout << "Developers->" << endl;
+    cout << "ENG: " << "Maximus" << endl << "ENG: " << "Rania" << endl << "ENG: " << "Ahmed" << endl << "ENG: " << "Mohamed" << endl << "ENG: " << "Mostafa";
 
-
-
-
-
-   // cout << "Team hug for bugs graduate project..!" << endl;
-
-
-  return 0;
-}
+    return 0;
+};
